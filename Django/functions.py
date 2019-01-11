@@ -5,3 +5,10 @@ def one_out_of_two(string):
         else:
             string = string[:index]+string[index].lower()+string[index+1:]
     return string
+
+def is_isogram(string):
+    string = string.lower()
+    if len(string) == len(''.join(set(string))):
+        return True
+    else:
+        return False
